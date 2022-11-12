@@ -41,6 +41,7 @@ Integrante 2 - Antunez Agustin
     font-family: 'Roboto', Helvetica;
 }
 
+
 img {
     width: 100%;
 }
@@ -53,8 +54,7 @@ ul {
 body{
     padding: 0;
     margin: 0;
-    
-    
+    height: auto;
 }
 .plantilla-item{
     background-color: var(--Color-violeta-2-rgba);
@@ -70,6 +70,7 @@ nav{
     top: 0;
     left: 0;
     right: 0;
+    z-index: 10;
 }
 #btn-perfil{
     margin-right: auto;
@@ -91,25 +92,36 @@ nav{
     font-size: 1.5em;
     position: relative;
     overflow: hidden;
+    transition: background-color 1s;
+    cursor: pointer;
 }
 .boton-menu:nth-child(2), .boton-menu:nth-child(3), .boton-menu:nth-child(4){
     margin: 0 20px;
 }
+.boton-menu:nth-child(2)::before, .boton-menu:nth-child(3)::before, .boton-menu:nth-child(4)::before{
+    content: none;
+}
+.boton-menu:nth-child(2):hover, .boton-menu:nth-child(3):hover, .boton-menu:nth-child(4):hover{
+    background-color: rgba(239, 239, 239, 0.105);
+    transition: background-color 1s;
+}
 .boton-menu::before{
     content: " ";
-    background-color: rgba(239, 239, 239, 0.274);
+    background-color: rgba(239, 239, 239, 0.105);
     position: absolute;
-    top: 0;
-    left: 0;
     right: 0;
+    left: 0;
+    top: 0;
     width: 100%;
-    height: 0%;
-    transition: height 1s;
-    filter: blur(25px);
+    height: 0;
+    transition-property: height;
+    transition-duration: 1s;
+    *filter: blur(25px);
 }
 .boton-menu:hover::before{
     height: 100%;
-    transition: height .4s;
+    width: 100%;
+    transition: height 1s;
 }
 
 
@@ -123,6 +135,7 @@ main {
     background: #d3d3d3;
     gap: 50px;
     padding: 20px;
+
 }
 
 .plantilla-item{
@@ -142,6 +155,7 @@ main {
     box-shadow: -1px 0px 10px -1px rgba(0,0,0,0.35);
     transform: scale(1.02);
 
+    
 }
 
 .plantilla-izq {
@@ -216,11 +230,34 @@ h3 {
 #contenedor-central{
     display: flex;
     margin-top: 5vh;
+    min-height: calc(95vh - 25px);
 }
-main{
-    width: 80vh;
-}
+
 aside{
-    background-color: aqua;
+    background-color: var(--Color-violeta-2-rgba);
     flex-grow: 1;
+    /*display: flex esta en el otro archivo*/
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.plantilla-secundaria{
+    width: 70%;
+    height: 20%;
+    background-color: var(--Color-violeta-4-rgba);
+    box-shadow: 0 0 .3rem .2rem #0001;
+    border-radius: .2rem;
+}
+footer{
+    box-sizing: content-box;
+    background-color: var(--Color-violeta-5-rgba);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    
 }
