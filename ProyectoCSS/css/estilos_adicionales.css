@@ -1,13 +1,115 @@
 /***********************************************
-
- Autores: Integrante 1 - Canclini Camilo
+Autores: 
+Integrante 1 - Canclini Camilo - 
+Integrante 2 - Antunez Agustin
 
 ***********************************************/
 
 /* ORGANIZAR LAS DECLARACIONES EN BLOQUES*/
 
+
+/*PALETA DE COLORES*/
+:root{
+    --Color-violeta-1-rgba: rgba(106, 51, 161, 1); 
+    --Color-violeta-2-rgba: rgba(48, 46, 51, 1); 
+    --Color-violeta-3-rgba: rgba(17, 8, 26, 1); 
+    --Color-violeta-4-rgba: rgba(102, 102, 102, 1); 
+    --Color-violeta-5-rgba: rgba(146, 71, 222, 1); 
+}
+
 /* ESTILOS GENERALES*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&family=Roboto:wght@300&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', Helvetica;
+}
+
+img {
+    width: 100%;
+    border: 1px solid black;
+
+}
+
+button {
+    width: 150px;
+    height: 40px;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+
+ul {
+    list-style: none;
+}
 
 /* ESTILOS DE BARRA DE NAVEGACIÓN */
 
-/* ESTILOS DE ...*/
+/* ESTILOS DEL MAIN*/
+
+main {
+    width: 80%;
+    height: 90vh;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: rgb(197, 197, 197);
+    gap: 50px;
+    padding-top: 20px;
+
+
+}
+
+.plantilla-item{
+    background-color:#ddd9d9;
+    min-width: 400px;
+    max-width: 500px;
+    height: 300px;
+    display: flex;
+    padding: 10px;
+}
+
+.plantilla-izq {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 15px;
+}
+
+.plantilla-der {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 10px;
+
+}
+
+h2, h3 {
+    width: max-content;
+    padding: 3px;
+}
+
+.precio {
+    width: max-content;
+    padding: 3px;
+    font-size: 20pt;
+}
+
+.medios-pago {   
+    width: max-content;
+    padding: 3px;
+    font-size: 10pt;
+    color: var(--Color-violeta-5-rgba)
+}
+
+
