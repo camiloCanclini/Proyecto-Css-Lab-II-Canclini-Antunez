@@ -261,3 +261,38 @@ footer{
     text-transform: uppercase;
     
 }
+
+@media screen and (max-width: 1100px) {
+    #contenedor-central{
+        transition: all 1s;
+        flex-direction: column;
+    }
+    main{
+        height: auto;
+        width: 100%;
+        flex-grow: 1;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .plantilla-item{
+        width: 90%;
+        max-height: 90%;
+    }
+    aside{
+        flex-direction: row;
+        min-height: 30vh;
+        flex-wrap: wrap;
+        transition: all 1s;
+        flex-grow: 1;
+        align-content: stretch;
+        justify-content: center;
+    }
+    .plantilla-secundaria{
+        min-height: 200px;
+        max-height: 500px;
+        min-width: 200px;
+        flex-grow: 1;
+        margin: 10px;
+    }
+  }
