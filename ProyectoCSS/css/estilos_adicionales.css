@@ -46,9 +46,6 @@ body{
 
 /* ESTILOS DE BARRA DE NAVEGACIÓN */
 
-.plantilla-item{
-    background-color: var(--Color-violeta-2-rgba);
-}
 nav{
     display: flex;
     justify-content: space-evenly;
