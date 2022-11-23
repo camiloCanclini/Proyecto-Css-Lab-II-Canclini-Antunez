@@ -167,7 +167,7 @@ main {
 
 .plantilla-izq button {
     width: 150px;
-    height: 40px;
+    min-height: 40px;
     border: none;
     border-radius: 5px;
     background-color: var(--Color-violeta-1-rgba);
